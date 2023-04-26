@@ -1,0 +1,2 @@
+C:\Projects\DT_004_Toolbox_React\MiscTools\MiscTools\obj\Debug\misctools.esproj.SuggestedBindingRedirects.cache
+C:\Projects\DT_004_Toolbox_React\MiscTools\MiscTools\obj\Debug\misctools.esproj.CoreCompileInputs.cache
