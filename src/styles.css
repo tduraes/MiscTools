@@ -78,6 +78,7 @@ body {
     height: 100vh;
     padding: 1rem;
     width: 100%;
+    margin: 1rem;
 }
 
 
@@ -131,7 +132,6 @@ button {
     border-radius: 0.25rem;
     border: none;
     cursor: pointer;
-    padding: 2rem;
 }
 
     button:hover {
@@ -162,9 +162,13 @@ input[type="checkbox"] {
 
 
 .basic-container {
-    border: 1px solid #ccc;
+    border: 0.5rem solid #ccc;
     padding: 1rem;
     background-color: #f5f5f5;
+    margin: 1rem;
+    align-items: center;
+    font-style: italic;
+    font-family: Consolas;
 }
 
 .password-title {
@@ -197,7 +201,7 @@ input[type="checkbox"] {
 .password-input {
     margin-bottom: 1rem;
     width: 100%;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .password-status {

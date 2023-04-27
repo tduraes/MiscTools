@@ -355,7 +355,7 @@ const PasswordValidator = () => {
     };
 
     return (
-        <div>
+        <div className="basic-container">
             <p>Active rules: {activeRules}</p>
             <div className="basic-container">
                 {messages.split('\n').map((message, index) => (
