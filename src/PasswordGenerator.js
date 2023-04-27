@@ -60,7 +60,8 @@ const PasswordGenerator = () => {
     };
 
     return (
-        <div>
+        <div className="basic-container">
+            <h3>Password Generator</h3>
             <div className="basic-container">
                 <p className="password-title">Choose the parameters of your password:</p>
                 <div>
@@ -89,7 +90,7 @@ const PasswordGenerator = () => {
                         <span>{passwordLength}</span>
                     </div>
                 </div>
-                <button classname="button" onClick={regeneratePassword}>{password ? 'regenerate' : 'generate'}</button>
+                <button className="button" onClick={regeneratePassword}>{password ? 'regenerate' : 'generate'}</button>
             </div>
 
             <div className="basic-container">
