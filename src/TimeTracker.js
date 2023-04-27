@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+
 function TimeTracker() {
     const [isTrackingTime, setIsTrackingTime] = useState(false);
     const [startTime, setStartTime] = useState(null);
@@ -40,6 +41,46 @@ function TimeTracker() {
         setStartTime(Date.now());
     };
 
+    //const copyTable() {
+    //    const table = document.getElementById("timeTable");
+    //    const tableText = table.innerText;
+    //    navigator.clipboard.writeText(tableText).then(() => {
+    //        alert("Table copied to clipboard!");
+    //    });
+    //}
+
+
+    //const stopTimer = () => {
+    //    if (!endTime) {
+    //        alert('The timer is not running. Please start the timer first.');
+    //        return;
+    //    }
+    //    setIsTrackingTime(false);
+    //    const timeSpent = endTime - startTime;
+    //    //const remainingTime = estimatedTime - timeSpent;
+    //    const timeLog = {
+    //        taskName,
+    //        projectName,
+    //        taskDescription,
+    //        estimatedTime,
+    //        startTime: new Date(startTime),
+    //        endTime: new Date(endTime),
+    //        totalTime: timeSpent,
+    //        //remainingTime: remainingTime
+    //    };
+    //    setTimeLogs([...timeLogs, timeLog]);
+    //    //setRemainingTime(remainingTime);
+    //    //setTaskName('');
+    //    //setProjectName('');
+    //    //setTaskDescription('');
+    //    //setEstimatedTime('');
+    //    //setStartTime(null);
+    //    //setEndTime(null);
+    //    //setTotalTime(0);
+    //    //setElapsedTime(0);
+    //};
+
+
     const stopTimer = () => {
         if (!endTime) {
             alert('The timer is not running. Please start the timer first.');
@@ -47,7 +88,7 @@ function TimeTracker() {
         }
         setIsTrackingTime(false);
         const timeSpent = endTime - startTime;
-        //const remainingTime = estimatedTime - timeSpent;
+        const updatedTotalTime = totalTime + timeSpent;
         const timeLog = {
             taskName,
             projectName,
@@ -55,20 +96,15 @@ function TimeTracker() {
             estimatedTime,
             startTime: new Date(startTime),
             endTime: new Date(endTime),
-            totalTime: timeSpent,
-            //remainingTime: remainingTime
+            totalTime: updatedTotalTime,
         };
         setTimeLogs([...timeLogs, timeLog]);
-        //setRemainingTime(remainingTime);
-        //setTaskName('');
-        //setProjectName('');
-        //setTaskDescription('');
-        //setEstimatedTime('');
-        //setStartTime(null);
-        //setEndTime(null);
-        //setTotalTime(0);
-        //setElapsedTime(0);
+        setTotalTime(updatedTotalTime);
+        setStartTime(null);
+        setEndTime(null);
+        setElapsedTime(0);
     };
+
 
     const resetTimer = () => {
         setIsTrackingTime(false);
@@ -145,7 +181,7 @@ function TimeTracker() {
             </div>
             {timeLogs.length > 0 && (
                 <div className="basic-container">
-                    <table>
+                    <table id="timeTable">
                         <thead>
                             <tr>
                                 <th>Task Name</th>
@@ -169,6 +205,8 @@ function TimeTracker() {
                             ))}
                         </tbody>
                     </table>
+                    <br />
+                    {/*<button onclick="copyTable()">Copy table to clipboard</button>*/}
                 </div>
             )}
         </div>
