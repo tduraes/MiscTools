@@ -93,8 +93,7 @@ const PasswordValidator = () => {
     };
 
     return (
-        <div className="basic-container">
-            <h3>Password Validation</h3>
+        <div>
             <div className="basic-container">
                 <label>
                     Password:

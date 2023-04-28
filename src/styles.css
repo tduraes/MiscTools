@@ -240,3 +240,27 @@ tr:hover {
 td:last-child {
     text-align: center;
 }
+
+
+
+.game-container {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background-color: gray;
+}
+
+.player {
+    position: absolute;
+    left: 50px;
+    height: 50px;
+    width: 50px;
+    background-color: red;
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    background-color: green;
+}

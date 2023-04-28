@@ -60,8 +60,7 @@ const PasswordGenerator = () => {
     };
 
     return (
-        <div className="basic-container">
-            <h3>Password Generator</h3>
+        <div>
             <div className="basic-container">
                 <p className="password-title">Choose the parameters of your password:</p>
                 <div>

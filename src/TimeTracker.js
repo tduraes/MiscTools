@@ -137,8 +137,7 @@ function TimeTracker() {
     };
 
     return (
-        <div className="basic-container">
-            <h3>Time Tracker</h3>
+        <div>
             <div className="basic-container">
                 <div>
                     Current Time: {formatCurrentTime(currentTime)}
