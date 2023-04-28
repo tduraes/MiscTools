@@ -6,11 +6,13 @@ import PasswordGenerator from './PasswordGenerator';
 import PasswordValidator from './PasswordValidator';
 import TimeTracker from './TimeTracker'
 import Game from './Jumper';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <Game />
+        <App />
+        {/*<Game />*/}
         {/*<TimeTracker />*/}
         {/*<PasswordGenerator />*/}
         {/*<PasswordValidator />*/}
