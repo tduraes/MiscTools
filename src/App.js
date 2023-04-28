@@ -3,6 +3,7 @@ import './styles.css';
 import PasswordGenerator from './PasswordGenerator';
 import PasswordValidator from './PasswordValidator';
 import TimeTracker from './TimeTracker';
+import Calculator from './Calculator';
 
 function BasicContainer({ children, title }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +37,9 @@ function App() {
             </BasicContainer>
             <BasicContainer title="Password Validator">
                 <PasswordValidator />
+            </BasicContainer>
+            <BasicContainer title="Calculator">
+                <Calculator />
             </BasicContainer>
         </div>
     );
