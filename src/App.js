@@ -4,6 +4,8 @@ import PasswordGenerator from './PasswordGenerator';
 import PasswordValidator from './PasswordValidator';
 import TimeTracker from './TimeTracker';
 import Calculator from './Calculator';
+import LandingPage from './LandingPage';
+
 
 function BasicContainer({ children, title }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +31,9 @@ function BasicContainer({ children, title }) {
 function App() {
     return (
         <div>
+            <BasicContainer title="Landing Page">
+                <LandingPage />
+            </BasicContainer>
             <BasicContainer title="Time Tracker">
                 <TimeTracker />
             </BasicContainer>
